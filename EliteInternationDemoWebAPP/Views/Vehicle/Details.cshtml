@@ -1,0 +1,98 @@
+﻿@model EliteInternationDemoWebAPP.Models.Vehicle
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vehicle</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorOfVehilce.ColorOfVehicleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorOfVehilce.ColorOfVehicleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelType.FuelTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelType.FuelTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GearType.GearTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GearType.GearTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SteerType.SteerTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SteerType.SteerTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfVehicle.VehicleTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfVehicle.VehicleTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Registraion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Registraion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineCapacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineCapacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MileAges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MileAges)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VehicleId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

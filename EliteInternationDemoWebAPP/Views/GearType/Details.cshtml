@@ -1,0 +1,26 @@
+﻿@model EliteInternationDemoWebAPP.Models.GearType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GearType</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GearTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GearTypeName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GearTypeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

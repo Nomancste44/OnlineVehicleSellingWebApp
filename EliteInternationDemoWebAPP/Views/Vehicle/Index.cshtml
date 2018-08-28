@@ -1,0 +1,90 @@
+﻿@model IEnumerable<EliteInternationDemoWebAPP.Models.Vehicle>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ColorOfVehilce.ColorOfVehicleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FuelType.FuelTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GearType.GearTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SteerType.SteerTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeOfVehicle.VehicleTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Registraion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngineCapacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MileAges)
+        </th>
+        <th> Image</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ColorOfVehilce.ColorOfVehicleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FuelType.FuelTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GearType.GearTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SteerType.SteerTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeOfVehicle.VehicleTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Registraion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngineCapacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MileAges)
+        </td>
+        <td>
+            <img src="@ViewData[item.VehicleId.ToString()]" width="100" height="100"/>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit",new { id=item.VehicleId }) |
+            <a href="@Url.Action("Details","VehicleImage",new{id=item.VehicleId})">Details</a> |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VehicleId })
+        </td>
+    </tr>
+}
+
+</table>
